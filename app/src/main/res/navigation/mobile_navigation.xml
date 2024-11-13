@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_recipes_host">
+
+
+    <fragment
+        android:id="@+id/navigation_recipes_host"
+        android:name="com.example.provaprogetto.ui.DrinkListFragment"
+        android:label="Ricette"
+        tools:layout="@layout/fragment_nav_drink_list"
+        />
+
+
+    <fragment
+        android:id="@+id/drinkRecipeFragment"
+        android:name="com.example.provaprogetto.ui.recipe.DrinkRecipeFragment"
+        android:label="Ricetta completa" >
+        <argument
+            android:name="drinkId"
+            app:argType="long" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_fav"
+        android:name="com.example.provaprogetto.ui.fav.FavFragment"
+        android:label="@string/title_fav"
+        tools:layout="@layout/fragment_fav" >
+        <action
+            android:id="@+id/action_FavFragment_to_drinkRecipeFragment"
+            app:destination="@id/drinkRecipeFragment" />
+        <action
+            android:id="@+id/action_favFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment">
+            <argument
+                android:name="recipe"
+                app:argType="com.example.provaprogetto.drink.Recipe" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_classifica"
+        android:name="com.example.provaprogetto.ui.ranking.RankingFragment"
+        android:label="@string/title_classifica"
+        tools:layout="@layout/fragment_ranking" >
+
+        <action
+            android:id="@+id/action_RankingFragment_to_drinkRecipeFragment"
+            app:destination="@id/drinkRecipeFragment" />
+        <action
+            android:id="@+id/action_RankingFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment">
+        <argument
+            android:name="recipe"
+            app:argType="com.example.provaprogetto.drink.Recipe" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_shopList"
+        android:name="com.example.provaprogetto.ui.shopList.ShopListFragment"
+        android:label="@string/title_shopList"
+        tools:layout="@layout/fragment_shoplist" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.provaprogetto.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.provaprogetto.ui.recipe.RecipeDetailFragment"
+        android:label="Ricetta completa" >
+
+
+
+        <argument
+            android:name="recipe"
+            app:argType="com.example.provaprogetto.drink.Recipe" />
+
+    </fragment>
+
+
+</navigation>

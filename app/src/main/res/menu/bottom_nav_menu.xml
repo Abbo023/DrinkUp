@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_recipes_host"
+        android:icon="@drawable/drink"
+        android:title="@string/ricettario" />
+
+    <item
+        android:id="@+id/navigation_fav"
+        android:icon="@drawable/heart_on"
+        android:title="@string/title_fav" />
+
+    <item
+        android:id="@+id/navigation_classifica"
+        android:icon="@drawable/ic_leaderboard"
+        android:title="@string/title_classifica" />
+
+    <item
+        android:id="@+id/navigation_shopList"
+        android:icon="@drawable/ic_shop"
+        android:title="@string/title_shopList" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/title_profile" />
+
+
+</menu>

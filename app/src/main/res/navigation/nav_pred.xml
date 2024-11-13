@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pred"
+    app:startDestination="@+id/navigation_pred">
+
+
+    <fragment
+        android:id="@+id/drinkRecipeFragment1"
+        android:name="com.example.provaprogetto.ui.recipe.DrinkRecipeFragment"
+        android:label="Ricetta Completa" >
+        <argument
+            android:name="drinkId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_drinkRecipeFragment_to_predFragment"
+            app:destination="@id/navigation_pred" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pred"
+        android:name="com.example.provaprogetto.ui.pred.PredFragment"
+        android:label="Ricettario base"
+        tools:layout="@layout/fragment_pred" >
+    <action
+        android:id="@+id/action_predFragment_to_drinkRecipeFragment1"
+        app:destination="@id/drinkRecipeFragment1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_custom"
+        android:name="com.example.provaprogetto.ui.custom.CustomFragment"
+        android:label="Ricette personalizzate"
+        tools:layout="@layout/fragment_custom">
+        <action
+            android:id="@+id/action_customFragment_to_drinkRecipeFragment"
+            app:destination="@id/drinkRecipeFragment1" />
+        <action
+            android:id="@+id/action_customFragment_to_recipeDetailFragment1"
+            app:destination="@id/recipeDetailFragment1" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailFragment1"
+        android:name="com.example.provaprogetto.ui.recipe.RecipeDetailFragment"
+        android:label="Ricetta completa" >
+        <argument
+            android:name="recipe"
+            app:argType="com.example.provaprogetto.drink.Recipe" />
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_customFragment"
+            app:destination="@id/navigation_custom" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_personal"
+        android:name="com.example.provaprogetto.ui.personal.PersonalFragment"
+        android:label="Le tue ricette"
+        tools:layout="@layout/fragment_personal">
+
+        <action
+            android:id="@+id/action_personalFragment_to_newPersonalFragment"
+            app:destination="@id/addPersonalFragment" />
+        <action
+            android:id="@+id/action_personalFragment_to_personalDetailFragment"
+            app:destination="@id/personalDetailFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPersonalFragment"
+        android:name="com.example.provaprogetto.ui.add.NewPersonalFragment"
+        android:label="Crea la tua ricetta personale!"
+        tools:layout="@layout/fragment_new_recipe" >
+        <action
+            android:id="@+id/action_newPersonalFragment_to_PersonalDetailFragment"
+            app:destination="@id/personalDetailFragment" >
+            <argument
+                android:name="personal"
+                app:argType="com.example.provaprogetto.room.LocalPersonal" />
+        </action>
+        <action
+            android:id="@+id/action_newPersonalFragment_to_navigation_personal"
+            app:destination="@id/navigation_personal" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalDetailFragment"
+        android:name="com.example.provaprogetto.ui.personal.PersonalDetailFragment"
+        android:label="PersonalDetailFragment" >
+        <argument
+            android:name="personal"
+            app:argType="com.example.provaprogetto.room.LocalPersonal" />
+        <action
+            android:id="@+id/action_personalDetailFragment_to_personalFragment"
+            app:destination="@id/navigation_personal" />
+    </fragment>
+
+</navigation>

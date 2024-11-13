@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="?attr/colorSecondary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/image_drink"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:src="@drawable/aaaaaa" />
+
+            <TextView
+                android:id="@+id/nome_drink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:textSize="20sp"
+                android:textColor="?attr/android:textColor"
+                app:layout_constraintBottom_toBottomOf="@id/image_drink"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image_drink"
+                app:layout_constraintTop_toTopOf="@id/image_drink"
+                app:layout_constraintVertical_bias="0.333"
+                tools:text="Old Fashioned" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="84dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                tools:text="Creato da: Abbo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nome_drink" />
+
+            <ImageView
+                android:id="@+id/upload_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/upload_on"
+                app:layout_constraintBottom_toTopOf="@id/author"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

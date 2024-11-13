@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_pred"
+        android:title="@string/ricette_predefinite" />
+    <item
+        android:id="@+id/navigation_custom"
+        android:title="@string/ricette_personalizzate" />
+    <item
+        android:id="@+id/navigation_personal"
+        android:title="@string/ricette_personali" />
+</menu>

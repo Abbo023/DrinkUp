@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DrinkUp</string>
+    <string name="title_classifica"> </string>
+    <string name="title_shopList"> </string>
+    <string name="title_profile"> </string>
+    <string name="title_pred"> </string>
+    <string name="title_fav"> </string>
+    <string name="title_new">Nuova ricetta</string>
+    <string name="title_online">Le vostre ricette</string>
+    <string name="created_by">Creato da: %1$s</string>
+    <string name="ricettario"> </string>
+    <string name="ricette_predefinite">Ricettario base</string>
+    <string name="ricette_personalizzate">Ricette personalizzate</string>
+    <string name="ricette_personali">Ricette personali</string>
+
+</resources>

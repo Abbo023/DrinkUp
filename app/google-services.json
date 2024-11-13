@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "940866669514",
+    "firebase_url": "https://drinkup-b2ad6-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "drinkup-b2ad6",
+    "storage_bucket": "drinkup-b2ad6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940866669514:android:b8d3718ba5cb9a7b8f5d33",
+        "android_client_info": {
+          "package_name": "com.example.provaprogetto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940866669514-78n0ea8qes2lfv6uf6ql099qikmnkgfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.provaprogetto",
+            "certificate_hash": "974f7d428593111ca58040f6bae3d553fbf11960"
+          }
+        },
+        {
+          "client_id": "940866669514-urjc1dctlt1mp6atcr9fkkflvf5h9ak1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB04nRKAUwqxhmoUoAfcouxHsVddb2p680"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940866669514-urjc1dctlt1mp6atcr9fkkflvf5h9ak1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
